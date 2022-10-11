@@ -1,0 +1,45 @@
+<!-- <div class="card mt-3 box">
+  <p class="text-center">shopping list</p>
+</div> -->
+
+<div class="row">
+  <div class="col-xs-10">
+    <app-shopping-list-edit></app-shopping-list-edit>
+    <hr>
+
+    <ul class="list list-group">
+      <a
+        class="list-group-item"
+        *ngFor="let ingredient of ingredients"
+        >
+          {{ ingredient.name }} ({{ ingredient.amount }})
+
+    </a>
+    </ul>
+  </div>
+</div>
+
+<!-- This is what this looked like before the shopping list service. We no longer need the listener:
+
+<div class="row">
+  <div class="col-xs-10">
+    <app-shopping-list-edit
+    (ingredientAdded)="onIngredientAdded($event)"></app-shopping-list-edit>
+    <hr>
+
+    <ul class="list list-group">
+      <a
+        class="list-group-item"
+        *ngFor="let ingredient of ingredients"
+        >
+          {{ ingredient.name }} ({{ ingredient.amount }})
+
+    </a>
+    </ul>
+  </div>
+</div> -->
+
+<!-- //This represents a single item on out shopping list.
+Originally the a had the same href=# like the other places throughout the app
+but well be treating this like a button and so we removed it cause it would cause
+unwanted problems with the inline styling that was added.  -->

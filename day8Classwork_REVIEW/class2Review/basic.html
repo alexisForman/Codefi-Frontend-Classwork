@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a variable for every JS data type</title>
+</head>
+<body>
+    <p id = string>This is a string: </p>
+    
+    <p id = number>This is a number: </p>
+
+    <p id = boolean>This is a boolean: Skunks can code better than me!:  </p>
+
+    <p id = altBoolean>This is also a boolean: I can code better than skunks:  </p>
+    
+    <p id = null>This is null: </p>
+
+    <p id = undefined></p>
+
+    <p id= object></p>
+
+    <p id = array>This is an array: </p>
+
+    <p id = noDefaultValueDeclaration></p>
+
+<script>
+
+        function addString()    {
+            let animals = "cat, dog, hamster, mouse, snake";
+            let stringExample = document.getElementById('string');
+            stringExample.innerText += animals;
+        }; 
+        addString();
+        
+
+        function addNumber()    {
+            let integer = 600;
+            let numberExample = document.getElementById('number');
+            numberExample.innerText += integer;
+        };
+        addNumber();
+
+
+        function addBooleanValue()  {
+            let answer = false;
+            let booleanExample = document.getElementById('boolean');
+            booleanExample.innerText += answer;
+        };
+        addBooleanValue();
+
+
+        function anotherBooleanValue()  {
+            let altAnswer = true;
+            let altBooleanExample = document.getElementById('altBoolean');
+            altBooleanExample.innerText += altAnswer;
+        };
+        anotherBooleanValue();
+
+    
+        function addNullValue() {
+            let something = null;
+            let nullExample = document.getElementById('null');
+            nullExample.innerText += `I have assigned ${something} value yet`;
+        };
+        addNullValue();
+
+
+        function addObject()    {
+            let botanicalObject = {
+                tree: "hickory",
+                flowerColor: null,
+                isDeciduous: true,
+                fruitKind: "nut"
+            };
+            let objectExample = document.getElementById('object');
+            objectExample.innerText += `The ${botanicalObject.tree} has ${botanicalObject.flowerColor} flowers and ${botanicalObject.fruitKind} for a seed. But, it is deciduous? ${botanicalObject.isDeciduous}.`;
+        };
+        addObject();
+
+        function addArray() {
+            let multiplesOfSevenArray = [7, 14, 21, 28, 35, 42, 49];
+            let arrayExample = document.getElementById('array');
+            arrayExample.innerText += `[${multiplesOfSevenArray}]`;
+        };
+        addArray();
+
+        // function addNoDefaultValue()    {
+        //     let hummingbirds = "";
+        //     let noDefaultExample = document.getElementById('noDefaultValueDeclaration');
+        //     noDefaultExample.innerText += hummingbirds;
+        // }
+        // addNoDefaultValue(RubyThroated);
+        // console.log(addNoDefaultValue());
+
+        // function addUndefined() {
+        //     let sizeOfUniverse = undefined;
+        //     let undefinedExample = document.getElementById('undefined');
+        //     undefinedExample.innerText += `The size of the universe is ${sizeOfUniverse}.`;
+        // };
+        // addUndefined();
+
+
+        
+
+
+        </script>
+        </body>
+        </html>

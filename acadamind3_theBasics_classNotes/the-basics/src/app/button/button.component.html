@@ -1,0 +1,9 @@
+<button btn btn-primary
+(click)="showSecret()"
+>Display Details</button>
+
+<p> Heres your secret message: {{secretMessage}} </p>
+
+<div *ngFor="let number of clickCount"
+[ngStyle]="{backgroundColor: number>=5 ? 'blue' : 'transparent'}"
+[ngClass]="{'white-text': number>=5}">Ill tell you {{ number }} time(s)!</div>

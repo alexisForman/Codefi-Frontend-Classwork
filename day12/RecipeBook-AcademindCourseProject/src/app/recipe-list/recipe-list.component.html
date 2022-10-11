@@ -1,0 +1,23 @@
+<!-- <div class="card mt-3 box">
+  <p class="text-center">recipe list</p>
+</div> -->
+
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success">New Recipe</button>
+  </div>
+</div>
+<div class="row">
+<div class="col-xs-12">
+
+
+  <app-recipe-item
+  *ngFor="let recipeEl of recipes"
+  [recipe]="recipeEl">
+</app-recipe-item>
+</div>
+</div>
+
+<!-- The 12 means it spans the whole area, this is nested in one of those boxes though. -->
+<!-- The alternative way to bind the image src: [src]="recipe.imagePath" -->
+

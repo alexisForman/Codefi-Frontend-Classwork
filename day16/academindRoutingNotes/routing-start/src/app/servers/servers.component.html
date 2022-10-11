@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-4">
+    <div class="list-group">
+      <a
+      [routerLink]="['/servers', server.id]"
+      [queryParams]="{allowEdit: server.id===3 ? '1' : '0'}"
+      [fragment]="'loading'"
+      href="#"
+      class="list-group-item"
+      *ngFor="let server of servers">
+        {{ server.name }}
+      </a>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <router-outlet></router-outlet>
+    <!-- <button class="btn btn-primary" (click)="onReload()">Reload Page</button>
+    <a routerLink="/servers">Reload Page</a> -->
+    <!-- <app-edit-server></app-edit-server>
+      <hr> -->
+    <!-- <app-server></app-server> -->
+  </div>
+</div>
+
+<!-- The routerLink directive and the navigate method both do the same task of routing to a different part
+of the app, however the navigate method when called doesnt know which component it is in, the same way
+routerLink does.  -->
+
+<!-- With the /, the path is an absolute path. Without the / it is a relative path. When you
+use a relative path, it works if you are in the same component you are routing from, but if you
+are changing components or levels you need to have an absolute path, cause relative paths just
+append into whatever component you are in.  -->

@@ -1,0 +1,18 @@
+<!-- <div class="card mt-3 box">
+  <p class="text-center">recipe item</p>
+</div> -->
+
+<a href="#" class="list-group-item clearfix"
+(click)="onSelected()" >
+<!-- //recipe here is a local variable that can be used just in this block of code that is effected by the ngFor loop -->
+<div class="pull-left">
+    <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+    <p class="list-group-item-text">{{ recipe.description }}</p>
+  </div>
+  <span class="pull-right">
+    <img src="{{ recipe.imagePath }}"
+    alt="{{ recipe.name }}"
+    class="image-responsive"
+    style="max-height: 50px;">
+  </span>
+</a>

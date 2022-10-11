@@ -1,0 +1,41 @@
+There are attribute directives and structural directives.
+
+There are many attribute directives, so far we have learned ngClass and ngStyle.
+
+But we can make our own attribute directives. An example of how to do this is in the
+basic highlight folder.  The directive is not a component but we have to go through the
+same steps of informing angular that the directive exists, declaring it in the app module.
+
+It is not good practice to directly access your elements with directives because
+as we get more advanced the server can do something without a DOM and the directives wont
+work.
+
+We can generate a directive from the terminal with ng g d + name of directive
+
+We can make a directive more interactive with @HostListener. Max added false, false within
+the ending parenthesis with the background color, angular gave me an error for that,
+so I didnt include and directive works as intended.
+
+Thye DOM doesnt recognize dashes so camel case in necessary whenever we are using something
+that accesses the DOM. @Host Binding accesses the DOM. Using HostBinding we dont have to use the
+renderer. There is nothing wrong with using the renderer, Max just wanted to show us another way
+of binding to the property of the element in our directive.
+
+Custom Property binding and custom event binding both work in directives. However, custom event
+binding probably wont be used very often.
+
+If we bind the properties using Input then we can directly bind to them from the outside and
+kinda overwrite our directives.
+
+There isnt actually a * in Angular, so I worked an example of what angular converts the star to
+and commented it out in the app template.
+
+ngIf does something if the conditions are true. We can write a custom directive that does something
+based on the conditions being false.
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+<div class = "container">
+  <div class = "row">
+    <div class = "col-xs-12">
+
+<p [ngStyle]="{backgroundColor: getColor()}"
+[ngClass]="{online: serverStatus === 'online'}">HI! Turns out server with ID {{ serverId }} is {{ serverStatus }}.</p>
+<p>All servers are {{ getServerStatus() }}</p>
+      <!-- //This is an example of string interpolation -->
+<!-- <p [innerText]="getServerStatus"></p> This is that same thing using string interpolation -->
+
+<p> {{ serverCreationStatus }} </p>
+
+</div>
+</div>
+</div>
+

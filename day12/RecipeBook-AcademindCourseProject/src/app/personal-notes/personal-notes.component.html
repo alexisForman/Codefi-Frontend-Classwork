@@ -1,0 +1,383 @@
+<div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link"
+                data-toggle="collapse"
+                data-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne">
+          Planning the App
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne"
+          class="collapse show"
+          aria-labelledby="headingOne"
+          data-parent="#accordion">
+      <div class="card-body">
+        The first step in making an app is to think about what components you need
+        and lay out the general structure of the app.
+        We dont want to have to put much logic into our root component, its just for
+        holding the overall app.
+        Model means which data will we have and each model should have its own class.
+        I generated all the components that Max had and created a box in each one with
+        the component name and gave them each different colors so it would be easier to
+        recognize which part of the app I was working on in live share.
+      </div>
+    </div>
+  </div>
+
+<!-- 1------------------------------------------------------------------------------------------------- -->
+
+<div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed"
+                data-toggle="collapse"
+                data-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo">
+          Setting Up The Application
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo"
+        class="collapse show"
+        aria-labelledby="headingTwo"
+        data-parent="#accordion">
+      <div class="card-body">
+          Max is using bootstrap 3. I had set this up before watching this video,
+          and already set it up with most current bootstrap, I think 5.
+      </div>
+    </div>
+  </div>
+
+  <!-- 2------------------------------------------------------------------------------------------------- -->
+
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed"
+                data-toggle="collapse"
+                data-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree">
+          Creating the Components
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        If I just see loading... in the browser, that means there is an error somewhere in my app.
+        I can put --spec false to prevent the creation of a test folder when I make a component in the CLI.
+        To have components show up side by side in the browser, I need to nest them inside eachother,
+        if I want to create a new component folder in the CLI that nests into another folder instead of
+        showing up on the main menu, then I write the current folders name/new ones name. Example:
+        ng g c recipe-book/recipe --spec false, would make a new folder called recipe in the already existing
+        recipe-book without a test file to delete.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3------------------------------------------------------------------------------------------------- -->
+
+<div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingFour">
+      <h5 class="mb-0">
+        <button class="btn btn-link"
+                data-toggle="collapse"
+                data-target="#collapseFour"
+                aria-expanded="true"
+                aria-controls="collapseFour">
+          Using the Components
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseFour"
+          class="collapse show"
+          aria-labelledby="headingFour"
+          data-parent="#accordion">
+      <div class="card-body">
+        If we want to make a new div, we can just type .whatever the class is and then enter
+        and the div is create with a class. .col-md-5 means column, 5 is medium sized column.
+        I could get a -5 and a -7 column to go side by side.
+        Not all of the files have to be directly linked with their selectors in the app,module,
+        even though I didnt nest the folders, I can still nest them together by putting the ones
+        app link into the other. So, only recipe book and shopping list are linked directly into
+        the app.module but all the other components are linked into those two. To show up in the
+        browser, a component has to have its selector linked into an html that is linked into
+        the app.module.
+      </div>
+    </div>
+  </div>
+
+<!-- 4------------------------------------------------------------------------------------------------------------ -->
+
+<div class="card">
+    <div class="card-header" id="headingFive">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed"
+                data-toggle="collapse"
+                data-target="#collapseFive"
+                aria-expanded="false"
+                aria-controls="collapseFive">
+          Adding a Navigation Bar
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFive"
+        class="collapse show"
+        aria-labelledby="headingFive"
+        data-parent="#accordion">
+      <div class="card-body">
+          Max is using bootstrap 3. I had set this up before watching this video,
+          and already set it up with most current bootstrap, I think 5.  In the end,
+          I couldnt get any of the header navigation bar to show up as he had it so I installed bs 3
+          and then it worked. A hamburger menu is a way to make a nav bar work on smaller screens. As
+          we added it in the video, theres no way of accessing our links on smaller screens.
+          I added a second navbar using the hamburger method.
+      </div>
+    </div>
+  </div>
+
+  <!-- 5----------------------------------------------------------------------------------------------------- -->
+
+  <div class="card">
+    <div class="card-header" id="headingSix">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed"
+                data-toggle="collapse"
+                data-target="#collapseSix"
+                aria-expanded="false"
+                aria-controls="collapseSix">
+          Creating a Recipe Model
+        </button>
+      </h5>
+    </div>
+    <div id="collapseSix"
+        class="collapse show"
+        aria-labelledby="headingSix"
+        data-parent="#accordion">
+      <div class="card-body">
+        When there is something that you are going to be using over and over again
+        it is good to use a template called a model. The template should be stored in its own file.
+        We made a model.ts file in the recipe-book folder.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 6------------------------------------------------------------------------------------------------- -->
+
+<div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingSeven">
+      <h5 class="mb-0">
+        <button class="btn btn-link"
+                data-toggle="collapse"
+                data-target="#collapseSeven"
+                aria-expanded="true"
+                aria-controls="collapseSeven">
+          Adding Content to the Recipe Model
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseSeven"
+          class="collapse show"
+          aria-labelledby="headingSeven"
+          data-parent="#accordion">
+      <div class="card-body">
+        I followed along with Max and added notes right into the files as I went about relevant information.
+        We started in the recipe-list.ts and imported an array and added an array and test recipe that
+        follows the model and added an image from the internet. This was not enough for the test recipe to
+        be visible on our app in the browser.
+        Then we went to recipe-list template.
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 7--------------------------------------------------------------------------------------------------- -->
+
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header" id="headingEight">
+        <h5 class="mb-0">
+          <button class="btn btn-link"
+                  data-toggle="collapse"
+                  data-target="#collapseEight"
+                  aria-expanded="true"
+                  aria-controls="collapseEight">
+            Outputting a list of recipes with ngFor
+          </button>
+        </h5>
+      </div>
+
+      <div id="collapseEight"
+            class="collapse show"
+            aria-labelledby="headingEight"
+            data-parent="#accordion">
+        <div class="card-body">
+          ngFor allows us to loop through all the recipes.
+          When using string interpolation its important to not accidently use the constructor arguements
+          if they are different than the public class variables.
+          For the image we can use property binding with square brackets or string interpolation with
+          double curly braces.
+          If we cant see our image or just get a dummy image, it might be because the image we chose
+          doesnt support deep linking.
+          All the work done in this video was in the recipe list template
+        </div>
+      </div>
+    </div>
+
+    <!-- 8----------------------------------------------------------------------------------------------------------- -->
+
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header" id="headingNine">
+          <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#collapseNine"
+                    aria-expanded="true"
+                    aria-controls="collapseNine">
+              Displaying Recipe Details
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseNine"
+              class="collapse show"
+              aria-labelledby="headingNine"
+              data-parent="#accordion">
+          <div class="card-body">
+            In the recipe detail we want to output information about a selected recipe. All work was
+            done in that file and notes are there. We cant click on any of the buttons or links yet but well
+            learn how later.
+          </div>
+        </div>
+      </div>
+
+      <!-- 9---------------------------------------------------------------------------------------------------- -->
+
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header" id="headingTen">
+            <h5 class="mb-0">
+              <button class="btn btn-link"
+                      data-toggle="collapse"
+                      data-target="#collapseTen"
+                      aria-expanded="true"
+                      aria-controls="collapseTen">
+                Working on the Shopping List component
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseTen"
+                class="collapse show"
+                aria-labelledby="headingTen"
+                data-parent="#accordion">
+            <div class="card-body">
+              We started in the shopping list template and made an unordered list item that represented
+              a single item on our shopping list.
+              Then we moved into the shopping list .ts to make an ingredients array like the recipe array.
+            </div>
+          </div>
+        </div>
+
+        <!-- 10------------------------------------------------------------------------------------------------------ -->
+
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingEleven">
+              <h5 class="mb-0">
+                <button class="btn btn-link"
+                        data-toggle="collapse"
+                        data-target="#collapseEleven"
+                        aria-expanded="true"
+                        aria-controls="collapseEleven">
+                  Creating an Ingredient Model
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapseEleven"
+                  class="collapse show"
+                  aria-labelledby="headingEleven"
+                  data-parent="#accordion">
+              <div class="card-body">
+                All video notes and work are in the shared folder in ingredient model
+                We created a shared file for the ingredient model since both the recipe and
+                the shopping list will be interacting with it and sharing it.
+              </div>
+            </div>
+          </div>
+
+          <!-- 11------------------------------------------------------------------------------------- -->
+
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="headingTwelve">
+                <h5 class="mb-0">
+                  <button class="btn btn-link"
+                          data-toggle="collapse"
+                          data-target="#collapseTwelve"
+                          aria-expanded="true"
+                          aria-controls="collapseTwelve">
+                    Creating and Outputting the Shopping List
+                  </button>
+                </h5>
+              </div>
+
+              <div id="collapseTwelve"
+                    class="collapse show"
+                    aria-labelledby="headingTwelve"
+                    data-parent="#accordion">
+                <div class="card-body">
+                  We are starting in shopping list component.ts and working on the array. We then
+                  imported Ingredient from the model and made a dummy shopping list.
+                  Then we want to output the model in the shopping list component template.
+                  My shopping list doesnt show up as it is.
+                </div>
+              </div>
+            </div>
+
+            <!-- 12------------------------------------------------------------------------------------------------ -->
+
+            <div id="accordion">
+              <div class="card">
+                <div class="card-header" id="headingThirteen">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link"
+                            data-toggle="collapse"
+                            data-target="#collapseThirteen"
+                            aria-expanded="true"
+                            aria-controls="collapseThirteen">
+                      Adding Shopping List Edit Section
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="collapseThirteen"
+                      class="collapse show"
+                      aria-labelledby="headingThirteen"
+                      data-parent="#accordion">
+                  <div class="card-body">
+                    Everything was very straightforward. I followed along with all work with Max in the edit
+                    component.  With so many components, I had wanted to make a colored box for each one
+                    and put the information from that component in the box so I could see it better, but
+                    because of the way the components are linked to one another, the boxes all piled onto
+                    one another, so I deleted the boxes.
+                  </div>
+                </div>
+              </div>
+
+      <!-- 13----------------------------------------------------------------------------------------------------- -->
+

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script src = "actions.js"></script>
+<script>
+
+
+// let dog = 12
+// let cat = 11
+
+
+// function triangleArea() {
+//     triangleArea = (base * height)/2;
+    
+// }
+
+// triangleArea();
+
+// console.log(triangleArea)
+
+
+// function triangleAreaWithArguements(base = 10, height = 20)  {
+//     const area = (base * height)/2;
+
+//     console.log(area)
+    
+// }
+
+// triangleAreaWithArguements(dog,cat);
+
+
+
+// ******intermediate exercise *********
+// reversibleInclusiveList(1, 5)    ➞    [1, 2, 3, 4, 5]
+// reversibleInclusiveList(2, 8)    ➞    [2, 3, 4, 5, 6, 7, 8]
+// reversibleInclusiveList(10, 20)    ➞   [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+// reversibleInclusiveList(24, 17)    ➞   [24, 23, 22, 21, 20, 19, 18, 17]
+// Notes
+// The resulting array's sort order is dependent on the input values.
+// All inputs provided in the test scenarios are valid.
+// If the start is greater than the end, return a descendingly sorted array; otherwise, ascendingly sorted.
+
+// --------------------------------------------------------------------------
+
+// Who?  the range of a given set of numbers
+
+// What? an array made out of the range of the set of numbers
+
+// When?  whenever we choose to console.log
+
+// ____________________________________________________________________________
+
+// function rangeArray(start, stop, step)  {
+
+//     for(let rangeStart = 1, rangeStop; start < (let stop = 10); start++)
+//     let rangeNumbers = Array.from(range);
+
+// }
+
+// function rangeArray();
+// console.log(rangeNumbers);
+
+// what? all the numbers in the range in an array form
+
+// when? when we say concole.log
+
+// ____________________________________________________________________________
+
+// I found this on MDN Developer Network, Reference Array.from, sequence generator (range)
+
+// const range = (start, stop, step) =>
+// Array.from({length: (stop - start) / step + 1} , 
+// (_, i) => start + (i * step));
+
+
+
+// let range = (start, stop, step) => 
+// Array.from({length: (stop - start + 1) / (step)},
+//  ( _,i ) => start + ( i * step));
+
+//  console.log(range(5,20,1));
+
+
+
+
+
+//  ---------------------------------------------------------------------------
+
+
+let beginning = 0
+let finishing   = 10
+let inc  = 1
+
+function reversibleInclusiveList()   {
+
+    for(beginning, finishing - beginning, step++),
+if beginning<stop   {
+    reversibleInclusiveList.range(start, end);
+}
+else if beginning>stop  {
+    reversibleInclusiveList.range(end, start);
+}
+
+};
+
+reversibleInclusiveList(1,10,1);
+
+
+
+
+
+
+
+
+// reversibleInclusiveList(1, 5)    ➞    [1, 2, 3, 4, 5]
+
+// reversibleInclusiveList(2, 8)    ➞    [2, 3, 4, 5, 6, 7, 8]
+
+// reversibleInclusiveList(10, 20)    ➞   [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+// reversibleInclusiveList(24, 17)    ➞   [24, 23, 22, 21, 20, 19, 18, 17]
+
+
+
+// let factorOne = 2
+// let factorTwo = 3
+
+// function productOne 
+
+
+
+// multiply numbers within an array to get an initial product
+// add all the arrays together to get a final sum
+
+
+
+// product([[1,2],[1,1],[2,3]])    ➞    9
+// 1 * 2 + 1 * 1 + 2 * 3
+
+// product([[10,2],[5,0],[2,3]])    ➞    26
+// 10 * 2 + 5 * 0 + 2 * 3
+
+// product([[1,2],[2,3],[3,4]])   ➞    20
+// 1 * 2 + 2 * 3 + 3 * 4
+
+// product([[1,2],[0,3],[3,0]])    ➞    2
+// 1 * 2 + 0 * 3 + 3 * 0
+</script>
+
+
+
+
+</body>
+</html>
+
+
+<!-- JavaScript Essential Concepts (Class 6)
+
+
+
+
+reversibleInclusiveList(1, 5)    ➞    [1, 2, 3, 4, 5]
+
+reversibleInclusiveList(2, 8)    ➞    [2, 3, 4, 5, 6, 7, 8]
+
+reversibleInclusiveList(10, 20)    ➞   [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+reversibleInclusiveList(24, 17)    ➞   [24, 23, 22, 21, 20, 19, 18, 17]
+Notes
+
+The resulting array's sort order is dependent on the input values.
+All inputs provided in the test scenarios are valid.
+If the start is greater than the end, return a descendingly sorted array; otherwise, ascendingly sorted.
+Exercise #3: Advanced
+
+Aim: Create a function that takes three collections of arguments and returns the sum of the product of the grouped numbers.
+
+Examples
+
+product([[1,2],[1,1],[2,3]])    ➞    9
+// 1 * 2 + 1 * 1 + 2 * 3
+
+product([[10,2],[5,0],[2,3]])    ➞    26
+// 10 * 2 + 5 * 0 + 2 * 3
+
+product([[1,2],[2,3],[3,4]])   ➞    20
+// 1 * 2 + 2 * 3 + 3 * 4
+
+product([[1,2],[0,3],[3,0]])    ➞    2
+// 1 * 2 + 0 * 3 + 3 * 0 -->

@@ -1,0 +1,503 @@
+<body>
+
+<div class="container"></div>
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>Module Instruction</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+      <p
+      (click)="closeAnswer()">Nothing to note.</p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>How an Angular App Gets Loaded and Started</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+        <p
+        (click)="closeAnswer()">
+        The app.component.html file is not the one filling the server.
+        Index.html has an approot component created automatically by our CLI.
+        In app.compondent.ts app root is assigned as the selector
+        In environments.main.ts app.module is tied in.
+        In app.module.ts app component is tied in.
+        And together those files make a kind of loop that allows the index.html to
+        render whatever we add into out app.component.html into the browser.</p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>Components are Important</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+        <p
+        (click)="closeAnswer()">
+        The app component is our root component, that  holds out entire application.
+        If we want to add new components we will nest them into the app component.
+        Each component is a section of your application/webpage.</p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>Creating a New Component</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+        <p
+        (click)="closeAnswer()">
+        All of the app related content should go into the app folder of the CLI.
+        Each component should get its own folder.
+        A good naming convention is to name the folder something sensible and
+        name your component inside foldername.conponent.ts.
+        A component is just a typescript class.
+        Creating the new component.ts and its html file are not enought to make it work
+        with the rest of the project. Notes continued in server.component.ts.</p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>Understanding the Role of AppModule and Component Declaration</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+        <p
+        (click)="closeAnswer()">
+        Modules are used to bundle pieces of the app into packages.
+        For most projects it is sufficient to just use the app.module but in bigger
+        projects, we will make additional modules.
+        Delarations, providers, providers and bootstrap and key pieces  of information in app.module.
+        Bootstrap tells the apps html file what it needs to be on the lookout for.
+        We dont change the bootstrap array because we wont be adding any new components to the
+        main index.html file.
+        Angular doesnt automcatically scan and render all files. It will only pay
+        attention to files declared in the app.module.ts. Additional notes in that file.
+        The server component is registered in app.module.ts but it isnt being used yet.</p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>Using Custom Components</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+        <p
+        (click)="closeAnswer()">
+        The hr tag below creates a horizontal line.
+        App server tag below is our own custom tag that brings the server folder thats nested in the app folder
+        into this particular html file.</p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>Creating Components with the CLI and Nesting Components</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+        <p
+        (click)="closeAnswer()">
+        We can make a new component in the CLI (terminal).
+        Step one: Keep main terminal running, start a second terminal line by hitting the +
+        My second terminal was called zsh.
+        Step two: type in ng generate component servers(or whatever you want the name to be).
+        Servers was just what I wanted the file to be named.
+        This could be typed shorthand with just ng g c servers.
+        Step three: put html tag app-servers /app-servers onto some other file to nest it.
+        I put it into the app.component.html and it then showed in live preview.</p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>Working With Component Templates</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+        <p
+        (click)="closeAnswer()">
+        We can add the html tag app-server to link our component to our project to server.component.ts
+        We would just add it to the template key of @component.
+        @Component absolutely needs to have a template.
+        We shouldnt write more than 3 lines of html code in the @component. If we have a lot of html to add
+        then we should just use a separate html file.
+        Addiing the template to the ts file is called inline. Using our html file is called external.</p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>Working with Component Styles</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+        <p
+        (click)="closeAnswer()">
+        styleUrls: [], and styles: [], I pick one or the other to use, not both.
+        Both take an array cause we can put multiple style references.
+        Same logic like template, if its three or less styles that we are adding
+        we can add it right to the .ts file inline. However if we are doing a lot of styling,
+        we should use the external css file.</p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>Fully Understand Component Selector</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+        <p
+        (click)="closeAnswer()">
+        This NEEDS to be unique so it doesnt override anything.
+        We can select by attribue with [], by class with ., like in css.
+        We can not select by ID and we cant use pseudoselectors like hover.
+        I believe this is too advanced for me for now, and I am not making any changes
+        or experiementing with my code.</p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>Assignment: Component Basics and Solution</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+        <p
+        (click)="closeAnswer()">
+        1. Create two new components, either manually or with CLI.
+        Call them WarningAlert and SuccessAlert.
+        2. Output them beneath eachother in the app component.
+        3. Output a warning or success message in the components.
+        4. Style the components appropriately (ie. change their text color)</p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>What is Databinding?</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+        <p
+        (click)="closeAnswer()">
+            <!-- Basically databinding means communication between your TS and
+          what your user client sees.
+          String interpolation a( a{ a{ a} a} a) and property binding (a[ a]= "data")
+          are both ways of databinding.
+          We can react to user events with event binding ((event)= "expression")
+          The last kind of databinding we are going to go over is
+          two way binding ( a[a ( ngmodel ) a] = "data" )
+          I just put the a's there to avoid errors. --></p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>String Interpolation</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+        <p
+        (click)="closeAnswer()">
+        Add properties to component.ts export class
+        Then call those properties in double curly braces in html
+        Methods that return a string can also be used. Example in component.ts</p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>Property Binding</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+        <p
+        (click)="closeAnswer()">
+        Followed along with video to make a button in servers.html and control
+        the button dynamically from servers. component. ts by adding a property to
+        the export class and also a constructor method.  The task being done with
+        property binding is the enabling/disabling of the button.</p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>What is Databinding</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+        <p
+        (click)="closeAnswer()">
+        It is bad to mix property binding and string interpolation. That will break our app.
+        If I want to print text or output something from my template, I should use
+        string interpolation, if I want to change the property of an HTML element, I
+        should use property binding.</p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>Event Binding</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+      <p
+      (click)="closeAnswer()">
+      This is just like setting the onClick method but instead of the word on,
+      we just put click in parenthesis, for Angular to understand it.</p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>Passing and Using Data with Event Binding</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+      <p
+      (click)="closeAnswer()">
+      ($event) is a reserved angular word used for data binding. An example is worked
+      with a new input label in servers.com...ts and .html.</p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>Two Way Data Binding</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+      <p
+      (click)="closeAnswer()">
+      There are three inportant steps for two way binding.
+      First, go into app module ts and add FormsModule to the import array.
+      Second, add the import FormsModule from @angular/forms
+      Third, use the ngModel directive.
+      I left the braces and quotes out of these notes so I wouldnt trigger an error
+      of course, they are required to make this work. Just follow the examples already
+      in the app module ts file.</p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>Assignment</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+      <p
+      (click)="closeAnswer()">
+      1. Add an input field which updates a property ('usernane') via two way binding.
+      Created and bound username label and input type in servers template.
+      Added userName to the servers logic export class.
+      Made a method to addUserName in servers logic.
+      Made a button to add a username in servers template.
+      Added boolean information to username creation status and added it to constructor method
+      I had to use nom instead of name cause name made like a password lock in my input bar.
+      Add this.userNom '' to the method that is triggered on button click to make it revert
+      to being an empty input box on click.</p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>Understanding Directives</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+      <p>Directives are instructions in the DOM.
+        Components are a kind of directive, they are directives with a template.</p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>Using ngIf to Output Data Conditionally</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+      <p
+      (click)="closeAnswer()">
+      ngIf is a built in directive.
+      The * is required for *ngIf to work properly because it is a structural directive.</p>
+      </div>
+      </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>Enhancing ngIF with an else condition</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+      <p
+      (click)="closeAnswer()">
+      # is a marker, its called a local reference.
+      Worked along in template</p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>Styling Elements Dynamically with ngStyle</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+      <p
+      (click)="closeAnswer()">
+      A directive that starts with ng is a built in directive.
+      We put [] on directives not because they are part of the directive name but
+      to bind to the directive property.
+      Example worked in server template and logic.</p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>Applying CSS Classes Dynamically with ngClass</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+      <p
+      (click)="closeAnswer()">
+      ng Class is used to dynamically add or remove classes.
+      In the video when I followed along with Max, he created the color class directly into
+      the server logic @ component, however when I did this I couldnt get the errors to go
+      away, something about needing to use a string and not a class so I re linked the css folder
+      and made the .online class in the css folder and it worked just as intended.</p>
+      </div>
+    </li>
+  </ul>
+
+<div class="accordian"></div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="question"
+      (click)="changeOQ()">
+        <h2>Outputting Lists with ngFor</h2>
+      </div>
+      <div class="answer"
+      [ngClass]= "{answerTrue: hideAnswer=== true }">
+      <p
+      (click)="closeAnswer()">
+      Made a servers array in the export class of the servers logic.
+      Added a push statement to the</p>
+      </div>
+    </li>
+  </ul>
+
+</body>
+
+<hr>
+
+<app-server></app-server>
+<app-servers></app-servers>
+
+<app-warning-alert></app-warning-alert>
+
+<app-success-alert></app-success-alert>
+
+<app-button></app-button>
