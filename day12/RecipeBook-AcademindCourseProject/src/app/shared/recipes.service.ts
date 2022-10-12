@@ -2,10 +2,11 @@ import { Injectable } from "@angular/core";
 import { Recipe } from "../recipe-book/recipe.model";
 import { Ingredient } from "./ingredient.model";
 import { ShoppingListService } from "./shopping-list.service";
+import { Subject } from "rxjs";
 
 @Injectable()
 export class RecipesService {
-  recipeSelected = Recipe;
+  recipeSelected = new Subject<Recipe>();
   private recipes: Recipe[]= [ //the colon is to add a type to the array, the type here had to be imported from the recipe module.
     new Recipe(
       'Schnitzel',
