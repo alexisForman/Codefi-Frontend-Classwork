@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Recipe } from '../recipe-book/recipe.model';
-import { RecipesService } from '../shared/recipes.service';
 
 @Component({
   selector: 'app-recipe-item',
@@ -9,15 +8,36 @@ import { RecipesService } from '../shared/recipes.service';
 })
 export class RecipeItemComponent implements OnInit {
   @Input() recipe: Recipe;
-
-  constructor(private recipeService: RecipesService) { }
+  @Input() index: number;
 
   ngOnInit(): void {
   }
 
-  onSelected()  {
-    this.recipeService.recipeSelected.emit(this.recipe)
 };
+
+// This is how this looked before routing:
+
+// import { Component, Input, OnInit } from '@angular/core';
+// import { Recipe } from '../recipe-book/recipe.model';
+// import { RecipesService } from '../shared/recipes.service';
+
+// @Component({
+//   selector: 'app-recipe-item',
+//   templateUrl: './recipe-item.component.html',
+//   styleUrls: ['./recipe-item.component.css']
+// })
+// export class RecipeItemComponent implements OnInit {
+//   @Input() recipe: Recipe;
+
+//   constructor(private recipeService: RecipesService) { }
+
+//   ngOnInit(): void {
+//   }
+
+//   onSelected()  {
+//     this.recipeService.recipeSelected.emit(this.recipe)
+//   }
+// };
 
 // This is how this looked before services:
 
