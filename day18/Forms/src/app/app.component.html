@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form #signupForm="ngForm">
+        <div id="email">
+          <div class="form-group">
+            <label for="">What is your email address?</label>
+            <input type="email"
+                    id="email"
+                    class="form-control"
+                    ngModel
+                    name="email"
+                    required
+                    email
+                    #email="ngModel">
+            <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid email address</span>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Please create a password.</label>
+            <input type="password" id="password" class="form-control" name="password" required ngModel #password="ngModel">
+            <span class="help-block" *ngIf="!password.valid && password.touched">Please create a password</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="subscription">Please choose a subscription level.</label>
+          <select id="subscription" name="subscription" ngModel class="form-control">
+            <option value="Basic">Basic</option>
+            <option value="Pro">Pro</option>
+            <option value="Advanced">Advanced</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" type="submit" (click)="onSubmit()"></button>
+        <p *ngIf="!signupForm.valid && signupForm.touched">Hey! Fix this!  The form is invalid!</p>
+      </form>
+
+    </div>
+  </div>
+</div>
