@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row">
+    <form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)">
+      <div class="form-group">
+        <label for="title">Title</label>
+          <input
+          type="text"
+          class="form-control"
+          id="title"
+          required
+          ngModel
+          name="title"
+          />
+      </div>
+
+            <div class="form-group">
+              <label for="Content">Content</label>
+                <textarea
+                class="form-control"
+                id="Content"
+                required
+                ngModel
+                name="Content"
+                ></textarea>
+            </div>
+
+            <button class="btn btn-primary"
+                    type="submit"
+                    [disabled]="!postForm.valid">Send Post
+                  </button>
+
+    </form>
+
+<hr>
+
+<div class="row">
+  <button class="btn btn-primary" (click)="onFetchPosts()">
+    Fetch Posts
+  </button>
+
+  <button class="btn btn-danger"
+          [disabled]="loadedPosts.length < 1" (click)="onClearPosts()">
+      Clear Posts
+  </button>
+</div>
+
+<div class="row">
+  <p *ngIf="loadedPosts.length < 1 && !isFetching">No Posts Available</p>
+  <ul class="list-group" *ngIf="loadedPosts.length >= 1 && !isFetching">
+    <li class="list-group-item" *ngFor="let post of loadedPosts">
+      <h1>{{ post.title }}</h1>
+      <p>{{ post. content }}</p>
+    </li>
+  </ul>
+  <p *ngIf="isFetching">Loading....</p>
+</div>
+
+  </div>
+
