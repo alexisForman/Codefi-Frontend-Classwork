@@ -9,4 +9,7 @@ import { CommonModule } from '@angular/common';
     CommonModule
   ]
 })
-export class MovieModule { }
+export class MovieModule { 
+  title: string,
+  genre: string
+}
